@@ -3,7 +3,22 @@
 *::before {
   margin: 0;
   padding: 0;
-  background: #000;
-  color: #fff;
   box-sizing: border-box;
+}
+/* 
+orange hsl(35, 77%, 62%)
+
+
+bg hsl(36, 100%, 99%)
+
+
+*/
+
+body {
+  background: hsl(233, 8%, 79%);
+}
+
+main {
+  width: min(1200px, 100% - 3rem);
+  margin: 3rem auto;
 }
