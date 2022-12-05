@@ -1,24 +1,74 @@
+/* ------------------- CSS RESET -------------------------*/
+
 *,
 *::after,
 *::before {
   margin: 0;
   padding: 0;
+  font: inherit;
   box-sizing: border-box;
 }
-/* 
-orange hsl(35, 77%, 62%)
 
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
 
-bg hsl(36, 100%, 99%)
+/* ----------------------------------------------- */
 
-
-*/
+:root {
+  --prmry-soft-orange: hsl(35, 77%, 62%);
+  --prmry-soft-red: hsl(5, 85%, 63%);
+  --off-white: hsl(36, 100%, 99%);
+  --grayish-blue: hsl(233, 8%, 79%);
+  --dark-grayish-blue: hsl(236, 13%, 42%);
+  --very-dark-blue: hsl(240, 100%, 5%);
+}
 
 body {
-  background: hsl(233, 8%, 79%);
+  min-height: 100vh;
+  font-family: "Inter", sans-serif;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav > ul {
+  display: flex;
+  list-style: none;
+}
+nav > ul > li {
+  margin-left: 2rem;
+  color: var(--dark-grayish-blue);
+}
+
+.burger-menu {
+  display: none;
 }
 
 main {
   width: min(1200px, 100% - 3rem);
   margin: 3rem auto;
+}
+
+@media only screen and (max-width: 600px) {
+  nav > ul {
+    display: none;
+  }
+  .burger-menu {
+    display: block;
+    width: 4rem;
+    height: 2rem;
+  }
+  .burger-menu > span {
+    width: inherit;
+    height: inherit;
+    background: #000;
+  }
 }
