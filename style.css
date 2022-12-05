@@ -31,20 +31,24 @@ video {
 body {
   min-height: 100vh;
   font-family: "Inter", sans-serif;
+  position: relative;
 }
+
 main {
   width: min(1200px, 100% - 3rem);
-  margin: 3rem auto;
+  margin: 0 auto;
 }
 
 nav {
   height: 10vh;
-  padding-inline: 0.9rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: 1px solid #000;
-  position: relative;
+
+  /* padding-inline: 0.9rem; */
+  margin: 3rem 0;
+
+  /* border: 1px solid #000; */
 }
 
 nav > ul {
@@ -59,13 +63,12 @@ nav > ul > li {
 .fa-bars {
   display: none;
 }
+.side-bar-links {
+  display: none;
+}
 
 @media only screen and (max-width: 600px) {
-  .hide-links {
-    left: 110%;
-  }
-
-  nav > ul {
+  /* nav > ul {
     position: absolute;
     top: 1px;
     left: 50%;
@@ -76,11 +79,39 @@ nav > ul > li {
     gap: 1rem;
     background: var(--grayish-blue);
     padding-top: 25%;
+  } */
+
+  nav > ul {
+    display: none;
   }
 
   .fa-bars {
     display: block;
     cursor: pointer;
     font-size: 2rem;
+  }
+
+  /* Sidebar styling  */
+  .side-bar-links {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+
+    background: rgb(89, 160, 232);
+    width: 50%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 2rem 2rem;
+  }
+  .side-bar-links ul {
+    list-style: none;
+  }
+  .side-bar-links ul > li {
+    margin: 1rem 0;
+  }
+  .side-bar-links .fa-x {
+    text-align: right;
   }
 }
