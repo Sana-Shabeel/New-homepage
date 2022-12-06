@@ -50,9 +50,15 @@ nav > ul {
   display: flex;
   list-style: none;
 }
-nav > ul > li {
+
+nav > ul > li a {
   margin-left: 2rem;
   color: var(--dark-grayish-blue);
+  text-decoration: none;
+}
+
+nav > ul > li a:hover {
+  color: var(--prmry-soft-red);
 }
 
 .fa-bars {
