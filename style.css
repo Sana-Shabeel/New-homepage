@@ -31,7 +31,6 @@ video {
 body {
   min-height: 100vh;
   font-family: "Inter", sans-serif;
-  position: relative;
 }
 
 main {
@@ -44,11 +43,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  /* padding-inline: 0.9rem; */
   margin: 3rem 0;
-
-  /* border: 1px solid #000; */
 }
 
 nav > ul {
@@ -79,13 +74,11 @@ nav > ul > li {
   }
 
   /* Sidebar toggle */
-
   .hide {
     display: none;
   }
 
   /* Sidebar styling  */
-
   aside {
     width: 100%;
     height: 100vh;
