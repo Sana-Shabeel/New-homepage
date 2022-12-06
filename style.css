@@ -68,19 +68,6 @@ nav > ul > li {
 }
 
 @media only screen and (max-width: 600px) {
-  /* nav > ul {
-    position: absolute;
-    top: 1px;
-    left: 50%;
-    width: 50%;
-    height: 100vh;
-    text-align: left;
-    flex-direction: column;
-    gap: 1rem;
-    background: var(--grayish-blue);
-    padding-top: 25%;
-  } */
-
   nav > ul {
     display: none;
   }
@@ -91,27 +78,62 @@ nav > ul > li {
     font-size: 2rem;
   }
 
+  /* Sidebar toggle */
+
+  .hide {
+    display: none;
+  }
+
   /* Sidebar styling  */
+
+  aside {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    background: rgba(0, 0, 0, 0.279);
+  }
+
   .side-bar-links {
     display: flex;
     flex-direction: column;
     gap: 3rem;
 
-    background: rgb(89, 160, 232);
     width: 50%;
     height: 100%;
     position: fixed;
     top: 0;
     right: 0;
-    padding: 2rem 2rem;
+    padding: 5rem 2rem;
+    background: rgb(255, 253, 253);
+    overflow-x: hidden;
+
+    transition: width 1s ease-in;
   }
+
   .side-bar-links ul {
     list-style: none;
   }
+
   .side-bar-links ul > li {
     margin: 1rem 0;
   }
+
+  .side-bar-links a {
+    padding: 0.5rem;
+    color: inherit;
+    text-decoration: none;
+    font-size: 1.2rem;
+  }
+
+  .side-bar-links a:hover {
+    color: var(--dark-grayish-blue);
+  }
+
   .side-bar-links .fa-x {
     text-align: right;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 10px;
   }
 }
