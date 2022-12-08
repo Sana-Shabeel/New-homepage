@@ -18,7 +18,6 @@ video {
 }
 
 /* ----------------------------------------------- */
-
 :root {
   --prmry-soft-orange: hsl(35, 77%, 62%);
   --prmry-soft-red: hsl(5, 85%, 63%);
@@ -57,7 +56,7 @@ nav > ul > li a {
   text-decoration: none;
 }
 
-nav > ul > li a:hover {
+nav ul li a:hover {
   color: var(--prmry-soft-red);
 }
 
@@ -66,6 +65,70 @@ nav > ul > li a:hover {
 }
 .side-bar-links {
   display: none;
+}
+
+.headline-section {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 2.06rem;
+}
+
+.major-news-section {
+  width: 67%;
+}
+
+.major-news__img {
+  background-image: url("./assets/images/image-web-3-desktop.jpg");
+  background-position: 50%;
+  background-size: cover;
+  width: 100%;
+  height: 250px;
+}
+
+.major-news__text {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+.major-news__text h1 {
+  width: 40%;
+  font-size: 3.2rem;
+  font-weight: 800;
+}
+
+.major-news__learnmore {
+  padding: 0 1.2rem;
+  position: relative;
+  width: 50%;
+}
+.major-news__learnmore p {
+  color: var(--dark-grayish-blue);
+}
+.major-news__learnmore button {
+  position: absolute;
+  bottom: 0;
+  padding: 13px 1.7rem;
+  cursor: pointer;
+  border: none;
+  background: var(--prmry-soft-red);
+  color: #fff;
+  letter-spacing: 3px;
+}
+
+.major-news__learnmore button:hover {
+  background: var(--very-dark-blue);
+}
+
+.major-news__learnmore p {
+  color: var(--dark-grayish-blue);
+  line-height: 1.5rem;
+  margin-top: 10px;
+}
+
+.suggested-section {
+  width: 30%;
+  background: #000;
 }
 
 @media only screen and (max-width: 600px) {
@@ -134,5 +197,32 @@ nav > ul > li a:hover {
     font-size: 1.5rem;
     cursor: pointer;
     padding: 10px;
+  }
+
+  /* Headline section */
+  .headline-section {
+    flex-direction: column;
+  }
+
+  .major-news-section {
+    width: 100%;
+  }
+  .major-news__text {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .major-news__text h1 {
+    width: 100%;
+    font-size: 2.5rem;
+    justify-content: flex-start;
+  }
+
+  .major-news__learnmore {
+    width: 100%;
+    padding: 0;
+  }
+  .major-news__learnmore button {
+    position: relative;
+    top: 2rem;
   }
 }
