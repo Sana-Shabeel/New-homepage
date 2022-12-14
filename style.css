@@ -131,6 +131,27 @@ nav ul li a:hover {
   background: #000;
 }
 
+.suggested-section {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.suggested-section .ss-title {
+  color: var(--prmry-soft-orange);
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+.ss-article1 h2 {
+  font-weight: 700;
+}
+.ss-article1 p {
+  font-weight: 400;
+  font-size: 0.6rem;
+}
+
 @media only screen and (max-width: 600px) {
   nav > ul {
     display: none;
